@@ -1,0 +1,383 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@400;700&display=swap");
+
+* {
+  padding: 0px;
+  margin: 0px;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: rgba(55, 102, 153, 1);
+  --secondary-color: rgba(0, 174, 255, 1);
+  --primary-font: "Lato", sans-serif;
+  --secondary-font: "Poppins", sans-serif;
+  --primary-fontsize: 36px;
+  --secondary-fontsize: 18px;
+  --content-fontsize: 16px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.header-links a {
+  color: black;
+  margin-right: 15px;
+  font-family: var(--primary-font);
+  font-weight: 500;
+  transition: 0.5;
+}
+
+.header-links a:hover {
+  color: var(--secondary-color);
+}
+button {
+  outline: none;
+  border: none;
+  font-family: var(--secondary-font);
+  padding: 15px;
+  color: white;
+  border-radius: 10px;
+  font-size: var(--content-fontsize);
+  font-weight: 700;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.header-links .active {
+  border-radius: 30px;
+  background-color: var(--secondary-color);
+  font-family: var(--primary-font);
+  padding: 12px 35px;
+  font-size: var(--content-fontsize);
+  color: white;
+  font-weight: 700px;
+}
+
+.active:hover {
+  color: var(--secondary-color);
+  background: white;
+  border: 1px solid var(--secondary-color);
+}
+
+.wealth {
+  display: none;
+}
+#header-img {
+  width: 60%;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 24px 20px 20px 85px;
+  align-items: center;
+}
+
+main {
+  display: flex;
+  margin: 30px 0px 70px 0px;
+  font-family: var(--primary-font);
+  font-weight: 400;
+  justify-content: space-around;
+  letter-spacing: 0.02rem;
+}
+
+#main-btn {
+  margin-top: 30px;
+  border-radius: 30px;
+  background-color: var(--secondary-color);
+  padding: 12px 35px;
+  width: 50%;
+  font-weight: 500;
+  font-family: var(--secondary-font);
+  letter-spacing: 0.02rem;
+  box-shadow: 1px 2px 3px gainsboro;
+}
+
+#main-btn:hover {
+  color: var(--secondary-color);
+  background-color: white;
+  border: 1px solid var(--secondary-color);
+}
+
+#main-img {
+  width: 65%;
+}
+
+.main-text {
+  width: 30%;
+  margin-top: 60px;
+}
+
+.main-text h1 {
+  margin: 60px 0px 30px 0px;
+  color: var(--primary-color);
+  font-family: var(--secondary-font);
+  font-weight: lighter;
+}
+.main-text h5 {
+  font-size: var(--content-fontsize);
+  font-weight: 700;
+}
+
+.contact-Details {
+  width: 45%;
+  line-height: 25.5px;
+}
+
+.contact-Details3 {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+footer {
+  padding: 20px 20px 20px 60px;
+  background-color: var(--primary-color);
+  color: white;
+  margin-top: 30px;
+  font-family: var(--primary-font);
+  font-size: 14px;
+}
+
+#contact {
+  background-color: var(--secondary-color);
+  border-radius: 30px;
+  width: 90%;
+  padding: 13px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+#contact:hover {
+  color: var(--primary-color);
+  background-color: white;
+  border: 1px solid var(--primary-color);
+}
+.footer-img {
+  margin-bottom: 50px;
+}
+
+.footer-headers {
+  margin-bottom: 30px;
+}
+.footer-grid {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+#footer-image {
+  width: 15%;
+}
+
+.footer-head {
+  margin-bottom: 10px;
+}
+.link1 {
+  margin-bottom: 5px;
+}
+.footer-line {
+  text-align: center;
+}
+
+.footer-tabs {
+  margin: 40px 40px 40px 170px;
+}
+
+.link-img {
+  margin-right: 7px;
+  width: 11px;
+}
+
+#icons {
+  color: var(--secondary-color);
+  font-size: 20px;
+}
+
+/* Revealing section as you scroll */
+
+.section {
+  transition: transform 1s, opacity 1s;
+}
+
+.section--hidden {
+  opacity: 0;
+  transform: translateY(8rem);
+}
+
+@media (max-width: 1024px) {
+  main {
+    flex-direction: column-reverse;
+    justify-content: center;
+    position: relative;
+    height: auto;
+    margin-top: 50px;
+    text-align: center;
+    padding: 15px;
+    height: 80vh;
+  }
+
+  .main-text {
+    width: 70%;
+    flex: none;
+    margin: 0px;
+    text-align: center;
+    margin: 0px auto;
+  }
+
+  #main-btn {
+    width: 25%;
+  }
+
+  .footer-line {
+    display: none;
+  }
+
+  #main-img {
+    width: 40%;
+  }
+
+  footer {
+    margin-top: 30px;
+  }
+}
+@media (max-width: 760px) {
+  .header-links {
+    margin: 0px;
+    top: 75px;
+    right: 100%;
+    width: 75%;
+    text-align: center;
+    background-color: whitesmoke;
+    height: 100vh;
+    font-family: "Gruppo";
+    position: fixed;
+    transition: right 0.2s ease-in-out;
+
+    border-radius: 5px;
+    z-index: 1;
+  }
+
+  #main-btn {
+    width: 40%;
+  }
+  .header-links .active {
+    background-color: transparent;
+    color: black;
+    padding: 20px 0px;
+    margin: 0px;
+    font-size: 18px;
+    border: none;
+  }
+
+  .header-links a {
+    display: block;
+    padding: 20px 0px;
+    color: black;
+    font-size: 18px;
+    text-align: center;
+    margin: 0px;
+    background-color: transparent;
+    border: none;
+  }
+  .header-links a:first-of-type {
+    margin-top: 60px;
+  }
+
+  .header-links a:hover {
+    color: var(--secondary-color);
+  }
+  header {
+    padding: 20px 25px;
+    z-index: 2;
+  }
+
+  .overlay-filter {
+    position: absolute;
+    backdrop-filter: blur(3px);
+    width: 100%;
+    height: 100%;
+    top: 76px;
+  }
+
+  #main-img {
+    width: 50%;
+  }
+
+  main {
+    margin: 0px;
+    height: auto;
+  }
+  .show {
+    right: 25%;
+  }
+  #footer-image {
+    width: 35%;
+  }
+
+  footer {
+    padding: 20px 40px;
+    margin-top: 10px;
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-row-gap: 20px;
+  }
+
+  .contact-Details3 {
+    grid-template-columns: auto;
+  }
+
+  .contact-Details {
+    width: 100%;
+  }
+
+  #contact {
+    margin-top: 20px;
+    width: 120%;
+  }
+
+  .footer-tabs {
+    margin: 40px 0px;
+  }
+  .main-content {
+    font-size: 15px;
+  }
+
+  .show {
+    display: block;
+  }
+  .wealth {
+    display: block;
+    margin-left: 18px;
+  }
+}
+
+@media (max-width: 450px) {
+  .footer-grid {
+    grid-template-columns: auto;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .contact-Details3 {
+    width: 80%;
+  }
+  #contact {
+    width: 95%;
+  }
+
+  .footer-tabs {
+    border-top: 1px solid white;
+    padding: 20px 0px;
+  }
+
+  #main-btn {
+    width: 60%;
+  }
+}

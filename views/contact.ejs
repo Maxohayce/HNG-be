@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('./partials/head') %>
+    
+    <link rel="stylesheet" href="./css/contact-page.css" />
+  </head>
+  <body>
+    <main>
+      <div class="main-image">
+        <a href="./">
+          <img
+            class="main-img"
+            src="./assets/Group 9 (1).png"
+            alt="contact-image"
+        /></a>
+      </div>
+
+      <div class="form-wrapper">
+        <div class="form-content">
+          <header>
+            <div class="Img-class">
+              <a href="./">
+                <img
+                  id="header-img"
+                  src="./assets/Group 9 (1).png"
+                  alt="brand-logo"
+              /></a>
+            </div>
+
+            <%- include('./partials/header') %>
+          </header>
+          <h2>We’d love to hear from you</h2>
+
+          <small id="content"
+            >Ask us all the questions you have about the internship. and we
+            would<br />
+            answer as soon as possible.</small
+          >
+          <h3>Send a message</h3>
+
+            <div class="input-group">
+              <small>Name</small>
+
+              <input type="text" name="name" autofocus />
+            </div>
+
+            <div class="input-group">
+              <small>Email</small>
+
+              <input type="email" name="email" />
+            </div>
+            <div class="input-group">
+              <small id="textarea">Message</small>
+
+              <textarea> </textarea>
+            </div>
+
+            <div class="btn">
+              <button id="contact-btn" type="submit">Get In Touch</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <!-- footer -->
+    <footer class="section">
+      <div class="footer-img">
+        <a href="./">
+          <img
+            id="footer-image"
+            src="./assets/Group 10 (1).png"
+            alt="brand-logo"
+        /></a>
+      </div>
+
+      <div class="footer-grid">
+        <div class="contact-Details">
+          <p class="footer-headers">Address</p>
+          3 Birrel Avenue, Sabo.<br />
+          Yaba, Lagos State,<br />
+          Nigeria
+        </div>
+
+        <div class="contact-Details">
+          <p class="footer-headers">Email</p>
+          <p>hello@hng.tech</p>
+          <p>+234 (0) 812 345 6789</p>
+        </div>
+
+        <div class="contact-Details contact-Details3">
+          <div>
+            <p class="footer-head">Connect With Us</p>
+            <p class="link1">
+              <img class="link-img" src="./assets/Vector.png" />hnginternship
+            </p>
+            <p class="link1">
+              <img
+                class="link-img"
+                src="./assets/Vector (1).png"
+              />hnginternship
+            </p>
+            <p class="link1">
+              <img
+                class="link-img"
+                src="./assets/Vector (2).png"
+              />hnginternship
+            </p>
+          </div>
+          <div class="contact-btn">
+            <button id="contact">Contact Us</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-line"><img src="./assets/Line 1.png" /></div>
+
+      <div class="footer-tabs">
+        <p>&copy; 2021 HNG internship . All Rights Reserved. HNG Group</p>
+      </div>
+    </footer>
+    <div class="overlay"></div>
+    <script src="./Js/project.js"></script>
+  </body>
+</html>

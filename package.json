@@ -1,0 +1,30 @@
+{
+  "name": "HNG",
+  "version": "1.0.0",
+  "description": "A redesign of the HNG internship website",
+  "main": "index.js",
+  "repository": "https://github.com/Maxohayce/HNG-be.git",
+  "author": "Devmax",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "dev": "nodemon",
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "ejs": "^3.1.6",
+    "errorhandler": "^1.5.1",
+    "express": "^4.17.1",
+    "express-form-data": "^2.0.17",
+    "express-validator": "^6.12.0",
+    "mongoose": "^5.13.2",
+    "multiparty": "^4.2.2",
+    "nodemailer": "^6.6.2",
+    "validator": "^13.6.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.9"
+  }
+}
