@@ -14,7 +14,7 @@ const UserSchema = new Schema(
             required: true,
             unique: true
         },
-        message: ""
+        message: String
     },
     {
         timestamps: true

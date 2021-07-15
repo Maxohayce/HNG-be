@@ -8,20 +8,19 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "dev": "nodemon",
-    "start": "node index.js"
+    "dev": "nodemon app.js",
+    "start": "node app.js"
   },
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
-    "ejs": "^3.1.6",
     "errorhandler": "^1.5.1",
     "express": "^4.17.1",
     "express-form-data": "^2.0.17",
     "express-validator": "^6.12.0",
+    "mailgun-js": "^0.22.0",
     "mongoose": "^5.13.2",
-    "multiparty": "^4.2.2",
-    "nodemailer": "^6.6.2",
+    "morgan": "^1.10.0",
     "validator": "^13.6.0"
   },
   "devDependencies": {
