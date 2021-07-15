@@ -27,8 +27,6 @@ module.exports = async ({ body: { name, email, message } }, res) => {
     const foundMail = await User.findOne({ email }, {upsert: true}).then(found => found)
     const foundName = await User.findOne({ name }, {upsert: true}).then(found => found)
 
-    console.log(foundMail, foundName);
-
     if (foundMail || foundName) throw new MyResponseError("You have already joined");
 
     // Save user
@@ -45,7 +43,6 @@ module.exports = async ({ body: { name, email, message } }, res) => {
         message: "You have successfully joined",
       });
   } catch ({ code, message }) {
-    console.log(code, message);
     return res.status(code || 500).send({ data: null, error: true, message });
   }
 };
