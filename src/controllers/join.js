@@ -24,8 +24,8 @@ module.exports = async ({ body: { name, email, message } }, res) => {
     if (!validator.isEmail(email))
       throw new MyResponseError("Email is invalid");
 
-    const foundMail = await User.find({ email }).then(found => found)
-    const foundName = await User.find({ name }).then(found => found)
+    const foundMail = await User.findOne({ email }).then(found => found)
+    const foundName = await User.findOne({ name }).then(found => found)
 
     console.log(foundMail, foundName);
 
