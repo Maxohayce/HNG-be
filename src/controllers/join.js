@@ -24,11 +24,6 @@ module.exports = async ({ body: { name, email, message } }, res) => {
     if (!validator.isEmail(email))
       throw new MyResponseError("Email is invalid");
 
-    const foundMail = await User.findOne({ email }).exec()
-    const foundName = await User.findOne({ name }).exec()
-
-    if (foundMail || foundName) throw new MyResponseError("You have already joined");
-
     // Save user
     const user = await new User({ name, email, message });
     const resp = await user.save();
@@ -43,6 +38,6 @@ module.exports = async ({ body: { name, email, message } }, res) => {
         message: "You have successfully joined",
       });
   } catch ({ code, message }) {
-    return res.status(code || 500).send({ data: null, error: true, message });
+    return code.toString().length > 3 ? res.status(409).send({error: true, message: "You have already joined"}) : res.status(code || 500).send({ data: null, error: true, message });
   }
 };
